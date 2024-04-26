@@ -16,14 +16,16 @@ export const setStyle = (tenantConfig: TenantConfig): HTMLStyleElement => {
     background-color: ${tenantConfig.globalNavigation.backgroundColor} !important;
     border-color: ${tenantConfig.globalNavigation.backgroundColor} !important;
     color: ${tenantConfig.globalNavigation.fontColor} !important;
+    fill: ${tenantConfig.globalNavigation.fontColor} !important;
   }
   .global-navigationbar-container a:not(.dropdown-item), .global-navigationbar-container button:not(.dropdown-item), [class*="globalNavigationBarContainer"] a:not(.dropdown-item), [class*="globalNavigationBarContainer"] button:not(.dropdown-item) {
     color: ${tenantConfig.globalNavigation.fontColor} !important;
+    fill: ${tenantConfig.globalNavigation.fontColor} !important;
   }
   .global-navigationbar-container a:hover:not(.dropdown-item), .global-navigationbar-container button:hover:not(.dropdown-item), [class*="globalNavigationBarContainer"] a:hover:not(.dropdown-item), [class*="globalNavigationBarContainer"] button:hover:not(.dropdown-item) {
     background-color: ${tenantConfig.globalNavigation.hoverBackgroundColor} !important;
   }
-  `;
+  `.trim();
 
   return insertStyle(css);
 };
